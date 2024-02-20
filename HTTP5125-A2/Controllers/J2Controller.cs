@@ -11,6 +11,7 @@ namespace HTTP5125_A2.Controllers
     [ApiController]
     public class J2Controller : ControllerBase
     {
+        // GET api/J2/{a}/{b}/{c}/{d}
         [HttpGet]
         [Route("api/J2/{a}/{b}/{c}/{d}")]
 
