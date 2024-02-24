@@ -56,7 +56,7 @@ namespace HTTP5125_A2.Controllers
                  q = q - 1;
                 //If the machine has now been played 35 times since last paying
                 //out, the number of times it's been played is reset to zero
-                //and Martha gets 30 more quarters
+                //and Martha receives 30 more quarters
                 if (x == 35)
                 {
                     x = 0;
@@ -64,7 +64,7 @@ namespace HTTP5125_A2.Controllers
                 }
                 //Martha has played one more round
                 round = round + 1;
-            //This same logic is repeated for machine 2 and 3
+            //This same logic is repeated for machines 2 and 3
           //Machine 2
                  y = y + 1;
                  q = q - 1;
@@ -92,7 +92,7 @@ namespace HTTP5125_A2.Controllers
               }
              //Once Martha has 0 quarters, the while loop finishes and the
              //method returns a concatenated string stating how many rounds she
-             //had played
+             //has played
             var message = "Martha plays " + round + " times before going broke.";
 
             return message;

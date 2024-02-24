@@ -15,14 +15,14 @@ public class J1Controller : ControllerBase
     [Route("api/J1/Menu/{burger}/{drink}/{side}/{dessert}")]
         /// <summary>
         /// Solving "The New CCC (Canadian Calorie Counting)" problem, this method
-        /// adds up total number of calories in a meal comprised by any of the
+        /// adds up the total number of calories in a meal comprised of any of the
         /// four options from each category of the provided menu.
         /// </summary>
         /// <param name="burger">An integer representing the index of the burger option chosen</param>
         /// <param name="drink">An integer representing the index of the drink option chosen</param>
         /// <param name="side">An integer representing the index of the side option chosenr</param>
         /// <param name="dessert">An integer representing the index of the dessert option chosen</param>
-        /// <returns>A string stating the sum of the calories from the 4 options chosen</returns>
+        /// <returns>A string stating the sum of the calories from the four options chosen</returns>
         /// GET api/J1/Menu/1/1/1/1 --> "Your total calorie count is 858"
         /// GET api/J1/Menu/1/2/3/4 --> "Your total calorie count is 691"
         /// GET api/J1/Menu/3/1/4/2 --> "Your total calorie count is 816"
@@ -30,7 +30,7 @@ public class J1Controller : ControllerBase
         //Creating the method and initalizing parameters
         public string Menu(int burger, int drink, int side, int dessert)
     {
-        //Creating a list to contain the 4 burger options and their caloric values
+        //Creating a list to contain the four burger options and their caloric values
         List<int> burgers = new List<int>();
         burgers.Add(461);
         burgers.Add(431);
@@ -38,7 +38,7 @@ public class J1Controller : ControllerBase
         burgers.Add(0);
 
         //Creating the variable burgerCal to contain the caloric value of the
-        //option chosen. Since the list starts with an index of zero the index
+        //option chosen. Since the list starts with an index of zero, the index
         //of the chosen burger will be one less than the option number
         int burgerCal = burgers[burger - 1];
 

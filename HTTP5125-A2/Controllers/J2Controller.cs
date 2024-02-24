@@ -15,17 +15,17 @@ namespace HTTP5125_A2.Controllers
         [HttpGet]
         [Route("api/J2/{a}/{b}/{c}/{d}")]
         /// <summary>
-        /// Solving the "Sounds Fishy!" problem, this method recieves consecutive
-        /// depth measurements and determines whether there is a fish rising, a
-        /// fish diving, a constant depth or no fish based on whether the inputs
-        /// are increasing, decreasing, remaianing the same, or not showing a
+        /// Solving the "Sounds Fishy!" problem, this method receives consecutive
+        /// depth measurements and determines if there is a fish rising, a
+        /// fish diving, a constant depth, or no fish based on whether the inputs
+        /// are increasing, decreasing, remaining the same, or not showing a
         /// consistent trend
         /// </summary>
         /// <param name="a">An integer representing the first depth recorded</param>
         /// <param name="b">An integer representing the second depth recorded</param>
         /// <param name="c">An integer representing the third depth recorded</param>
         /// <param name="d">An integer representing the fourth depth recorded</param>
-        /// <returns>A string Stating "Fish Rising", "Fish Diving", "Constant Depth",
+        /// <returns>A string stating "Fish Rising", "Fish Diving", "Constant Depth",
         /// or "No Fish" depending on the trend of the inputs</returns>
        
         /// GET api/J2/2/5/8/10 --> "Fish Rising"
