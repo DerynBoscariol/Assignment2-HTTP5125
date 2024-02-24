@@ -9,21 +9,37 @@ namespace HTTP5125_A2.Controllers
 { 
     [ApiController]
 public class J1Controller : ControllerBase
-{
-    // GET api/J1/Menu/{burger}/{drink}/{side}/{dessert}
+{      ///J1 - The New CCC (Canadian Calorie Counting)
+
     [HttpGet]
     [Route("api/J1/Menu/{burger}/{drink}/{side}/{dessert}")]
-
-    public string Menu(int burger, int drink, int side, int dessert)
+        /// <summary>
+        /// Adds up total number of calories in a meal comprised by any of the four options per category from provided menu.
+        /// </summary>
+        /// <param name="burger">An integer representing the index burger option chosen by the user</param>
+        /// <param name="drink">An integer representing the index drink option chosen by the user</param>
+        /// <param name="side">An integer representing the index side option chosen by the user</param>
+        /// <param name="dessert">An integer representing the index dessert option chosen by the user</param>
+        /// <returns>Sum of the calories from 4 options inputed as an integer</returns>
+        /// GET api/J1/Menu/1/1/1/1 --> "Your total calorie count is 858"
+        /// GET api/J1/Menu/1/2/3/4 --> "Your total calorie count is 691"
+        /// GET api/J1/Menu/3/1/4/2 --> "Your total calorie count is 816"
+        
+        //Creating the method and initalizing parameters
+        public string Menu(int burger, int drink, int side, int dessert)
     {
+        //Creating a list to contain the 4 burger options and their caloric values
         List<int> burgers = new List<int>();
         burgers.Add(461);
         burgers.Add(431);
         burgers.Add(420);
         burgers.Add(0);
 
+        //Creating the variable burgerCal to contain the caloric value of the option chosen
+        //Since the list starts with an index of zero the index of the chosen burger will be one less than the option number
         int burgerCal = burgers[burger - 1];
 
+        //Recreating the same logic for the drink, side, and dessert options
         List<int> drinks = new List<int>();
         drinks.Add(130);
         drinks.Add(160);
@@ -48,7 +64,10 @@ public class J1Controller : ControllerBase
 
         int dessertCal = desserts[dessert - 1];
 
+        //Calculating the total calories as the sum of the caloric value of each option
         int totalCal = burgerCal + drinkCal + sideCal + dessertCal;
+
+        //Concatenating a message and the total calories and returning that message
             string message = "Your total calorie count is " + totalCal;
             return message;
     }

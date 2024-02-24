@@ -10,12 +10,12 @@ namespace HTTP5125_A2.Controllers
 
     [ApiController]
     public class J3Controller : ControllerBase
-    {
-        // GET api/J3/{q}/{x}/{y}/{z}
+    {   //J3 - Slot Machines
+        
         [HttpGet]
         [Route("api/J3/{q}/{x}/{y}/{z}")]
-
-        public string untilBroke(int q, int x, int y, int z)
+        //
+        public string UntilBroke(int q, int x, int y, int z)
         {
             var round = 0;
             
