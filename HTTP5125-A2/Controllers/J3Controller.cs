@@ -10,8 +10,9 @@ namespace HTTP5125_A2.Controllers
 
     [ApiController]
     public class J3Controller : ControllerBase
-    {   //J3 - Slot Machines
-        
+    {   //J3 - Slot Machines - On page 4
+        //https://cemc.math.uwaterloo.ca/contests/computing/past_ccc_contests/2000/stage1/2000CCCStage1Contest.pdf
+
         [HttpGet]
         [Route("api/J3/{q}/{x}/{y}/{z}")]
         /// <summary>

@@ -10,8 +10,9 @@ namespace HTTP5125_A2.Controllers
 
     [ApiController]
     public class J2Controller : ControllerBase
-    {   //J2 - Sounds Fishy!
-        
+    {   //J2 - Sounds Fishy! - On page 5
+        //https://cemc.math.uwaterloo.ca/contests/computing/past_ccc_contests/2012/stage1/juniorEn.pdf
+
         [HttpGet]
         [Route("api/J2/{a}/{b}/{c}/{d}")]
         /// <summary>
